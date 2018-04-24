@@ -1,0 +1,11 @@
+version: '3'
+services:
+  superset:
+    build:
+      context: .
+      args:
+        SUPERSET_VERSION: 0.24.0
+    image: ayubkhan/superset
+    ports:
+      - 8088:8088
+      - 8000:8000

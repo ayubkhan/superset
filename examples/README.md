@@ -118,3 +118,31 @@ docker-compose exec superset superset-demo
 # Bring everything down
 docker-compose down -v
 ```
+
+## Nginx Unit
+
+```bash
+cd nginx-unit
+
+# Build superset nginx unit
+docker-compose build
+
+# Start Nginx Unit
+docker-compose up -d
+# Wait for Unit to come up fully...
+
+# Configure Nginx Unit for superset 
+curl -s -XPUT http://localhost:8000 -d@./config.json
+# You should see response: {"success": "Reconfiguration done."}
+
+# Initialize Superset
+docker exec -it nginxunit_superset_1 superset-init
+
+# (Optional) Initialize demo
+docker exec -it nginxunit_superset_1 superset load_examples
+
+# Play around in demo...
+
+# Bring everything down
+docker-compose down -v
+```

@@ -5,7 +5,7 @@ Docker image for [Superset](https://github.com/ApacheInfra/superset).
 
 ## Examples
 
-Navigate to the [`examples`](./examples) directory to view examples of how to configure Superset with MySQL, PostgreSQL, or SQLite.
+Navigate to the [`examples`](./examples) directory to view examples of how to configure Superset with MySQL, PostgreSQL, SQLite or Nginx Unit.
 
 
 ## Versions
